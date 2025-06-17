@@ -1,0 +1,21 @@
+{
+  "name": "fullstackopen-playwright",
+  "version": "1.0.0",
+  "main": "blog-app.test.js",
+  "scripts": {
+    "test": "playwright test --project=chromium --project=firefox",
+    "test:report": "playwright show-report",
+    "test:ui": "playwright test --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
