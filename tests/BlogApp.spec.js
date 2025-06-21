@@ -32,4 +32,11 @@ describe('Blog app', () => {
     await expect(await loginPage.isNotificationVisible(3000)).toBe(true);
     await expect(loginPage.page.getByText('wrong username or password')).toBeVisible();
   });
+
+  test('User can log out', async () => {
+    await loginPage.login(process.env.USER_NAME, process.env.PASSWORD);
+    await expect(loginPage.page.getByText(`${process.env.NAME} logged in`)).toBeVisible();
+    await loginPage.logout();
+    await expect(await loginPage.isLoginFormVisible()).toBe(true);
+  });
 });
